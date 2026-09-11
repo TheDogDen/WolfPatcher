@@ -56,12 +56,12 @@ The installer validates these final localized files after installation:
 | `sharedassets0.assets` | `dfe6e9dc2d6110c6efc9c95291560ab3c71c2177d9709f7b32067e9c2a100a81` |
 | `sharedassets2.assets` | `fb0e2b861ffbf33cef385019708fde3178405b908fb6dc5438d4fc792757e55e` |
 | `Managed/Assembly-CSharp.dll` | `5556d2bd800bc947938ad5330452c762806d856c0557d0866b6464e1c12f115f` |
-| `StreamingAssets/Bundles/scenes_wod01_prologue_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `a07f9e0e0790e50aaba96cdecc0df410775a3a658909afef0f12983741e37edc` |
-| `StreamingAssets/Bundles/scenes_wod01_day1_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `c07b8eb0600044969d6be60b8255b6851fcea5776884f92293ca73b9ce7c8c9f` |
-| `StreamingAssets/Bundles/scenes_wod01_day2_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `3732ae565cfb9a65764fd92743e0acf243b0571f8bf91cc34975afdf2d8dd64a` |
-| `StreamingAssets/Bundles/scenes_wod01_night2_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `5df86e8a31df934fbd77ebcad80bb322bb0f0f393340321cccaf9862fe787b6e` |
-| `StreamingAssets/Bundles/scenes_wod01_day3_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `8b7e073caaf7449f5b34d83ad87bd76c02e58bf953af11557e4ae4cbf05132bf` |
-| `StreamingAssets/Bundles/scenes_wod01_day4_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `2757acb599bbbca43a346b40220be3d9bf137ddd0a4a29637e6d3eba9c2255a6` |
-| `StreamingAssets/Bundles/scenes_wod01_day5_scenes_all_69c7f0a1f8c1305baf87a194bad03cde.bundle` | `5f1542bb01382a243aef016cbef3781f8b82d6f2c1426f3357d393deaa8a0fe0` |
+| `StreamingAssets/Bundles/scenes_wod01_0-prologue.hd` | `a07f9e0e0790e50aaba96cdecc0df410775a3a658909afef0f12983741e37edc` |
+| `StreamingAssets/Bundles/scenes_wod01_1-day1.hd` | `c07b8eb0600044969d6be60b8255b6851fcea5776884f92293ca73b9ce7c8c9f` |
+| `StreamingAssets/Bundles/scenes_wod01_2-day2.hd` | `3732ae565cfb9a65764fd92743e0acf243b0571f8bf91cc34975afdf2d8dd64a` |
+| `StreamingAssets/Bundles/scenes_wod01_3-night2.hd` | `5df86e8a31df934fbd77ebcad80bb322bb0f0f393340321cccaf9862fe787b6e` |
+| `StreamingAssets/Bundles/scenes_wod01_4-day3.hd` | `8b7e073caaf7449f5b34d83ad87bd76c02e58bf953af11557e4ae4cbf05132bf` |
+| `StreamingAssets/Bundles/scenes_wod01_5-day4.hd` | `2757acb599bbbca43a346b40220be3d9bf137ddd0a4a29637e6d3eba9c2255a6` |
+| `StreamingAssets/Bundles/scenes_wod01_6-day5.hd` | `5f1542bb01382a243aef016cbef3781f8b82d6f2c1426f3357d393deaa8a0fe0` |
 
 The source repository does not contain those game files.
