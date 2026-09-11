@@ -30,6 +30,16 @@ Elevated worker executable SHA-256:
 
 See [RELEASE_HASHES.md](RELEASE_HASHES.md) for additional verified hashes.
 
+## Verified public source
+
+The archived first-party source corresponding to the HOTF 1.0.0 release has been recovered, audited, and validated against the distributed binaries.
+
+All five principal first-party executable/assembly artifacts were reproduced **byte-for-byte** with .NET SDK `8.0.424` and the historical build path recorded by the assemblies.
+
+The HOTF 1.0.0 package contains GUI artifacts in the `1.0.0` version state and Core/Worker artifacts retained from the `1.0.0-rc2` build. This release composition is documented explicitly rather than being normalized or rewritten after the fact.
+
+See [BUILD.md](BUILD.md) and [SOURCE_PUBLICATION_STATUS.md](SOURCE_PUBLICATION_STATUS.md) for the exact reproduction procedure and hashes.
+
 ## Architecture
 
 WolfPatcher separates the generic patching engine from game-specific profiles.
@@ -48,11 +58,13 @@ Planned future profile:
 
 A future profile is not considered supported until its own baselines, patches, and final hashes have been independently validated.
 
+Some CLI and test-harness defaults in the historical source refer to the HOTF baseline because HOTF was the first validated profile. The production patching engine remains profile-driven.
+
 ## Security and privacy design
 
 WolfPatcher is designed to operate locally and offline.
 
-The production design does not require downloads, telemetry, analytics, account access, or remote license checks. It does not install services or persistence mechanisms and does not modify Microsoft Defender, SmartScreen, Firewall, or other Windows security settings.
+The first-party source does not implement downloads, telemetry, analytics, account access, or remote license checks. It does not install services or persistence mechanisms and does not modify Microsoft Defender, SmartScreen, Firewall, or other Windows security settings.
 
 When the selected game directory requires administrator access, the frontend may request elevation for `WolfPatcher.Worker.exe` through the normal Windows UAC mechanism.
 
@@ -66,9 +78,9 @@ Compatibility is determined by the real hashes of the game files. Steam, GOG, Ep
 
 ## Repository scope
 
-This repository is intended to contain first-party source code and public documentation. It is not a distribution point for original game files.
+This repository contains first-party WolfPatcher source code, tests, and public documentation. It is not a distribution point for original game files.
 
-It must not contain:
+It does not contain:
 
 - original Werewolf: The Apocalypse game assets;
 - full translated game assets from the commercial game;
@@ -77,12 +89,6 @@ It must not contain:
 - third-party executable binaries.
 
 The end-user runtime package is distributed separately.
-
-## Source publication status
-
-The repository documentation is being established from the audited HOTF 1.0.0 runtime release.
-
-The authoritative first-party source tree corresponding to that release must be present before this repository is presented as a complete source-to-binary verification reference. Until then, do not describe the repository as a reproducible build of the HOTF 1.0.0 binaries.
 
 ## Copyright / source usage
 
