@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <AssemblyName>WolfPatcher.Core</AssemblyName>
+    <RootNamespace>WolfPatcher.Core</RootNamespace>
+  </PropertyGroup>
+</Project>
