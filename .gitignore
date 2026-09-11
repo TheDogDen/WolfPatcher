@@ -1,0 +1,66 @@
+# Visual Studio / .NET
+.vs/
+**/bin/
+**/obj/
+artifacts/
+.artifacts/
+TestResults/
+*.user
+*.suo
+*.rsuser
+*.userosscache
+*.sln.docstates
+*.pdb
+*.binlog
+
+# Build / publish outputs
+Debug/
+Release/
+publish/
+*.nupkg
+*.snupkg
+
+# Local logs and diagnostics
+*.log
+logs/
+
+# Local environment files
+.env
+*.local
+
+# Runtime package material that must not be committed
+packages/
+release/
+runtime/
+baselines/
+patches/
+tools/*.exe
+*.xdelta
+*.vcdiff
+*.patch
+
+# Original/commercial game files and Unity assets
+*.assets
+*.resource
+*.resS
+*.bundle
+*.bank
+*.hd
+
+# Archives and installers
+*.zip
+*.7z
+*.rar
+*.msi
+*.msix
+
+# Certificates / signing material
+*.pfx
+*.p12
+*.snk
+
+# OS/editor noise
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
