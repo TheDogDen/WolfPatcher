@@ -1,44 +1,55 @@
-# Security
+# Security policy and design
 
-WolfPatcher is designed as a local, offline patcher.
+WolfPatcher is a local/offline Windows patcher. This document describes the intended behavior of the first-party source published in this repository.
 
 ## Network behavior
 
-The production design does not require Internet access to install or restore a localization and must not depend on downloads, uploads, telemetry, analytics, remote license checks, or cloud services.
+The first-party WolfPatcher source does not implement a network client for patching, downloading, uploading, telemetry, analytics, account access, or remote license checks.
 
-The public first-party source tree will be reviewed against this requirement before this repository is presented as a complete source-to-binary verification reference.
+The runtime package is designed to work completely offline.
 
-## Windows Registry
+The self-contained .NET runtime includes framework assemblies whose names contain `System.Net`; their presence in a packaged .NET application does not by itself indicate that WolfPatcher uses them for network activity.
 
-Installation-discovery code may read Windows Registry locations used by supported storefronts in order to locate existing game installations.
+## Installation discovery
 
-WolfPatcher must not create, modify, or delete storefront Registry keys as part of normal discovery.
+WolfPatcher may read local filesystem metadata and standard Windows registry locations in order to locate game installations for supported storefronts.
 
-## Elevation
+Storefront information is discovery evidence only. Compatibility is determined by the hashes of the actual game files.
 
-If the selected game directory is not writable by the current user, the GUI may request elevation for `WolfPatcher.Worker.exe` through the standard Windows UAC `runas` mechanism.
+## Privilege elevation
 
-No service is installed and no persistent elevated process is created.
+The normal frontend is not designed to run permanently elevated.
 
-## File modification safeguards
+When the selected game directory requires administrator write access, WolfPatcher may request normal Windows UAC elevation for `WolfPatcher.Worker.exe`. Elevation is limited to the requested installation or restore operation.
 
-WolfPatcher is designed to:
+## Filesystem changes
 
-- identify supported installation states before modification;
-- refuse unsupported, unknown, or modified baselines;
-- create backup data before commit;
-- use temporary/work files and transactional replacement;
-- preserve recovery information across interrupted operations;
-- validate resulting file hashes after installation or restoration.
+Before modifying supported game files, WolfPatcher performs read-only state/compatibility checks. Unknown or changed baselines are refused before the patching operation proceeds.
 
-For the HOTF 1.0.0 profile, a successful installation must reproduce all 13 expected final file hashes.
+A supported installation is backed up before replacement. Patched outputs are validated against expected hashes, and the operation is designed to support recovery/rollback and later restoration of the original files.
 
-## Windows security features
+## Persistence and Windows security settings
 
-WolfPatcher must not disable, bypass, or modify Microsoft Defender, SmartScreen, Firewall, or other Windows security settings.
+WolfPatcher does not intentionally:
 
-A Microsoft SmartScreen reputation warning for a new or unsigned executable is not the same as a malware detection. Users should investigate specific antivirus detections rather than being instructed to disable security software.
+- install a Windows service;
+- install startup persistence;
+- create a scheduled task for persistence;
+- disable or bypass Microsoft Defender;
+- disable or bypass SmartScreen;
+- change Windows Firewall configuration;
+- weaken Windows execution policy or other host security controls.
 
-## Reporting a security concern
+SmartScreen or antivirus reputation warnings for a new or unsigned executable must remain under the user's control. Users should verify the published SHA-256 values and public source rather than disabling security protections.
 
-Please contact **TheDogDen** through the project repository or Nexus Mods profile. Avoid posting sensitive exploit details publicly until they can be reviewed.
+## Runtime third-party tools
+
+The HOTF runtime package uses xdelta3/VCDIFF and XZ/liblzma tooling. Third-party executable binaries are not committed to this public first-party source repository. Their versions and release hashes are documented separately.
+
+## Source verification
+
+The HOTF 1.0.0 first-party GUI, Core and Worker artifacts were reproduced byte-for-byte from the archived source published here. See `BUILD.md`, `SOURCE_PUBLICATION_STATUS.md`, and `RELEASE_HASHES.md`.
+
+## Reporting a security issue
+
+Please report a suspected security problem privately to the project author before publishing exploit details. Include the WolfPatcher version, affected file/hash, Windows version, reproduction steps, and any relevant logs.
