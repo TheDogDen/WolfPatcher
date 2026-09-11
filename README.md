@@ -30,6 +30,16 @@ Elevated worker executable SHA-256:
 
 See [RELEASE_HASHES.md](RELEASE_HASHES.md) for additional verified hashes.
 
+## End-user distribution
+
+The official end-user distribution for the HOTF PT-BR localization remains the existing Nexus Mods page:
+
+https://www.nexusmods.com/werewolftheapocalypseheartoftheforest/mods/2
+
+This GitHub repository is the public first-party source and build-verification home; it is not intended to redistribute original game files.
+
+Canonical Nexus publication text and compatibility/security notes are maintained in [NEXUS_MODS.md](NEXUS_MODS.md).
+
 ## Verified public source
 
 The archived first-party source corresponding to the HOTF 1.0.0 release has been recovered, audited, and validated against the distributed binaries.
