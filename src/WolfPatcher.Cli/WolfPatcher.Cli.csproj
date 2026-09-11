@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>WolfPatcher.Cli</AssemblyName>
+    <RootNamespace>WolfPatcher.Cli</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../WolfPatcher.Core/WolfPatcher.Core.csproj" />
+  </ItemGroup>
+</Project>
