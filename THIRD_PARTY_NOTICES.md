@@ -1,41 +1,42 @@
-# Third-Party Notices
+# Third-party notices
 
-This public repository is intended to contain first-party WolfPatcher source code and documentation only. It does not vendor third-party executable binaries.
+WolfPatcher's first-party source is published separately from third-party runtime executables.
+
+The HOTF runtime package contains or relies on the following third-party components.
+
+## .NET
+
+WolfPatcher is built with .NET 8 and distributed as a self-contained Windows x64 application.
+
+Copyright © .NET Foundation and Contributors.
+
+.NET components are licensed under their applicable Microsoft/.NET Foundation licenses.
 
 ## xdelta3 / VCDIFF
 
-The HOTF 1.0.0 runtime package uses the external `xdelta3` command-line tool to apply VCDIFF deltas.
+Runtime tool version: `xdelta3 3.2.0`.
 
-Verified runtime tool version:
+xdelta3 is distributed under the Apache License 2.0. The runtime executable is not committed to this first-party source repository.
 
-`xdelta3 3.2.0`
+Verified HOTF runtime executable SHA-256:
 
-Upstream project:
+`53d90226615f217d3380c39892833311b4e24acd863e1ca01f14b5e772e2e6d0`
 
-https://github.com/jmacd/xdelta
+## XZ Utils / liblzma
 
-The upstream xdelta project states that the 3.2.x series is licensed under the Apache License 2.0.
+Runtime tool version: `XZ Utils 5.8.1`.
 
-The `xdelta3` binary is not stored in this public source repository.
+The runtime package includes `xz.exe` and `liblzma.dll` under their applicable XZ Utils/liblzma licensing terms. Those binaries are not committed to this first-party source repository.
 
-## XZ Utils
+Verified HOTF runtime hashes:
 
-The HOTF 1.0.0 runtime package also contains the external `xz` command-line tool for the UnityFS/LZMA processing path used by the patcher.
+- `xz.exe`: `000c3e35f1192bd905c4db5b2517259396058ab4638e260db26e943cc245a626`
+- `liblzma.dll`: `a6f022c8e4cd78e026c8b0da9f793dca1d3360840635f85ea631a31aed1081e7`
 
-Verified runtime tool version:
+## BLAKE3
 
-`XZ Utils 5.8.1`
+The archived QA/package materials identify BLAKE3 `1.8.5` among the third-party components used during the project. Any redistributed BLAKE3 component remains subject to its own license.
 
-Upstream project:
+## Commercial game content
 
-https://tukaani.org/xz/
-
-No XZ Utils binary or source code is stored in this public source repository.
-
-Licensing of XZ Utils depends on the specific version/component. Consult the upstream licensing files for the redistributed runtime version.
-
-## Microsoft .NET
-
-WolfPatcher targets .NET 8 and Windows Forms. The public source repository does not vendor the .NET runtime binaries.
-
-Microsoft .NET licensing and notices apply to runtime files distributed as part of a self-contained Windows build.
+No third-party license listed here grants rights to redistribute Werewolf: The Apocalypse game assets. Original game files and full translated commercial assets are not part of this source repository.
