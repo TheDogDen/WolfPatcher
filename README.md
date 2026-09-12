@@ -40,6 +40,8 @@ This GitHub repository is the public first-party source and build-verification h
 
 Canonical Nexus publication text and compatibility/security notes are maintained in [NEXUS_MODS.md](NEXUS_MODS.md).
 
+For Nexus Mods support or security review, see [NEXUS_REVIEW.md](NEXUS_REVIEW.md), which summarizes package identity, source-to-binary verification, security-relevant behavior and third-party runtime tools.
+
 ## Verified public source
 
 The archived first-party source corresponding to the HOTF 1.0.0 release has been recovered, audited, and validated against the distributed binaries.
